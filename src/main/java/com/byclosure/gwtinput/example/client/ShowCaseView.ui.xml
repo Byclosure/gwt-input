@@ -1,0 +1,19 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+		xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+		xmlns:input="urn:import:com.byclosure.gwtinput.ui.widgets">
+	<ui:style>
+		.foo:invalid{
+	 		border: 1px solid red;
+		}
+		
+		.foo:valid{
+			border: 1px solid green;
+		}
+	</ui:style>
+	<ui:with type="com.byclosure.gwtinput.example.client.I18nDict" field="dict"/>
+	
+	<g:HTMLPanel>
+		<input:BaseInput ui:field="input" type="email"  required="true" addStyleNames="{style.foo}"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 
