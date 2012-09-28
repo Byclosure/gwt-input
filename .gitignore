@@ -1,0 +1,7 @@
+.settings
+.classpath
+.externalToolBuilders
+.project
+src/main/gwt-unitCache
+src/main/webapp/WEB-INF
+src/main/webapp/showcase
