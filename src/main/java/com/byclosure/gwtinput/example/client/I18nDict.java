@@ -6,4 +6,8 @@ public class I18nDict {
 		return "Your email";
 	}
 	
+	public String incorrectFormat(){
+		return "incorrect format";
+	}
+	
 }

@@ -2,18 +2,19 @@
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
 		xmlns:g="urn:import:com.google.gwt.user.client.ui" 
 		xmlns:input="urn:import:com.byclosure.gwtinput.ui.widgets">
-	<ui:style>
-		.foo:invalid{
-	 		border: 1px solid red;
-		}
 		
-		.foo:valid{
-			border: 1px solid green;
-		}
-	</ui:style>
 	<ui:with type="com.byclosure.gwtinput.example.client.I18nDict" field="dict"/>
 	
 	<g:HTMLPanel>
-		<input:BaseInput ui:field="input" type="email"  required="true" addStyleNames="{style.foo}"/>
+		  <g:FlowPanel>
+				<input:TextInput ui:field="input" 
+													type="email" 
+													 required="true" 
+													 placeholder="{dict.yourEmail}"
+													 errorLabel="{label}"
+													 errorMessage="{dict.incorrectFormat}"/>
+				 <g:Label ui:field="label"/>
+			</g:FlowPanel>
+			<g:Button ui:field="btn">Validate</g:Button>
 	</g:HTMLPanel>
 </ui:UiBinder> 

@@ -1,0 +1,8 @@
+.errorlabel{
+	display: none;
+}
+
+.errorlabel.invalid{
+	display: inline-block;
+	color: red;
+}
