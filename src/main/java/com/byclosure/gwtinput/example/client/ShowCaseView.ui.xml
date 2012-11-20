@@ -9,7 +9,7 @@
 		  <g:FlowPanel>
 				<input:TextInput ui:field="input" 
 													type="email" 
-													 required="true" 
+													 required="true"
 													 placeholder="{dict.yourEmail}"
 													 errorLabel="{label}"
 													 errorMessage="{dict.incorrectFormat}"/>
