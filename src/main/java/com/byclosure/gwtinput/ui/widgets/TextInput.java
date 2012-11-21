@@ -7,8 +7,9 @@ import com.google.gwt.user.client.ui.Widget;
 
 public class TextInput extends TextBox implements IsUserTextInput {
 
-	private static final String ERRORLABEL_INVALID = "errorlabel invalid";
-	private static final String ERRORLABEL_VALID = "errorlabel";
+	private String ERRORLABEL_INVALID = "errorlabel invalid";
+	private String ERRORLABEL_VALID = "errorlabel";
+	
 	private HasText errorLabel;
 	private String errorMessage;
 
@@ -35,6 +36,17 @@ public class TextInput extends TextBox implements IsUserTextInput {
 	
 	public boolean isValid(){
 		return checkValidity(getElement());
+	}
+	
+	public void setErrorLabelInvalidStyle(String style) {
+		if(style == null || style.length() == 0) return;
+		
+		this.ERRORLABEL_INVALID = style;
+	}
+	public void setErrorLabelValidStyle(String style) {
+		if(style == null || style.length() == 0) return;
+		
+		this.ERRORLABEL_VALID = style;
 	}
 	
 	/*
@@ -65,7 +77,7 @@ public class TextInput extends TextBox implements IsUserTextInput {
 	public void setErrorMessage(String message) {
 		this.errorMessage =  message;
 	}
-
+	
 	
 	/*
 	 *  Helper native methods
